@@ -14,7 +14,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'mini_racer', platforms: :ruby
+gem 'mini_racer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -66,3 +66,7 @@ gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
 gem 'devise-bootstrap-views'
+gem 'bootstrap', '~> 4.3.1'
+
+# 13.11.2019
+gem 'faker'

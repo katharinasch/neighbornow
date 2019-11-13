@@ -10,6 +10,39 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+ * 
+ *
  */
+
+
+$body-bg: #e2e2e2;
+
+$theme-colors: (
+  "primary": #FF304F,
+  "secondary": #CACACA,
+  "success": #015668,
+  "info": #0F81C7,
+  "warning": #0DE2EA,
+  "danger": #06648C,
+  "light": #ececec,
+  "dark": #222222
+);
+
+#navbarNav .navbar-nav li > a {
+	text-transform: capitalize;
+	color: #333;
+	transition: background-color .2s, color .2s;
+	
+	&:hover,
+	&:focus {
+		color:rgba(0,0,0,2);
+		text-decoration: none;   
+	}
+}
+
+#navbarNav .navbar-nav li.active > a {
+	color:rgba(0,0,0,2);
+	text-decoration: none;  
+}
+
+@import "bootstrap";
