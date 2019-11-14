@@ -5,6 +5,38 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field">
+      <%= f.label :first_name %><br />
+      <%= f.text_field :first_name, autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :last_name %><br />
+      <%= f.text_field :last_name, autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :street %><br />
+      <%= f.text_field :street %>
+    </div>
+
+     <div class="field">
+      <%= f.label :house_number %><br />
+      <%= f.text_field :house_number %>
+    </div>
+
+    <div class="field">
+      <%= f.label :city %><br />
+      <%= f.text_field :city %>
+    </div>
+
+     <div class="field">
+      <%= f.label :zip_code %><br />
+      <%= f.text_field :zip_code %>
+    </div>
+
+
+
+    <div class="field">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
@@ -30,4 +62,5 @@
     <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
       <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
     <% end %>
+    <%= link_to "Sign up with Facebook", user_facebook_omniauth_authorize_path %>
 </div>
