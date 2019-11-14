@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_11_13_183300) do
 
   create_table "profiles", force: :cascade do |t|
@@ -25,6 +26,9 @@ ActiveRecord::Schema.define(version: 2019_11_13_183300) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+=======
+ActiveRecord::Schema.define(version: 2019_11_13_054042) do
+>>>>>>> 5f088c271d1ca1e33aa9e9fbb71ff871cddc97f9
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

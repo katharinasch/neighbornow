@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+<<<<<<< HEAD
 10.times do |n|
 	email = Faker::Internet.email
 	password = "password"
@@ -28,3 +29,5 @@ users.each do |user|
 	puts "Created profile #{i}"
 end
 
+=======
+>>>>>>> 5f088c271d1ca1e33aa9e9fbb71ff871cddc97f9

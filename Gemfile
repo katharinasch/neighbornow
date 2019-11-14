@@ -68,5 +68,9 @@ gem 'jquery-rails'
 gem 'devise-bootstrap-views'
 gem 'bootstrap', '~> 4.3.1'
 
+
 # 13.11.2019
 gem 'faker'
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+

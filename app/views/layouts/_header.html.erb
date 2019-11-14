@@ -13,6 +13,7 @@
     </ul>
 
       <ul class="nav navbar-nav navbar-right">
+
         	<% if user_signed_in? %>
               <% if current_user.profile == nil %>
                 <li class="nav-item nav-link navbar-right"><%= link_to 'CREATE PROFILE', new_profile_path%></li>
