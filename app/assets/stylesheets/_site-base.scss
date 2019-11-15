@@ -28,6 +28,16 @@ a {
 	> a {text-decoration: none!important;}
 	}
 
+.btn.form {
+	background-color: rgb(145, 167, 179);
+	padding: 10px 20px !important;
+	border-radius: 10px !important; 
+	font-size: 16px;
+	color: rgb(237, 237, 237);
+	font-weight: 300 !important;
+	> a {text-decoration: none!important;}
+	}
+
 .site-intro {
 	margin-top: 22%;
 	margin-left: 5%;}
@@ -38,6 +48,21 @@ h1 {
 
 p {
   font-size: 20px;}
+
+
+.center-items {
+  	width: 40%;
+  	height: 500px !important;
+  	background-color: rgba(220,226,229,0.3);
+  	font-weight: lighter! important;
+  	color: #547181;
+  	border-radius: 25px;
+    margin: 130px auto;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    float: none;
+}
 
 
 .border-2 {

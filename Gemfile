@@ -79,3 +79,6 @@ gem 'omniauth-facebook'
 gem 'bootstrap', '~> 4.3.1'
 gem 'breakpoint'
 
+# 15.11.2019
+
+gem "bootstrap_form", "~> 4.0"

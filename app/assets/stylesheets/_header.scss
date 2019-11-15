@@ -1,7 +1,7 @@
 .logo {
-	position: absolute;
-	top: 10px;
-	left: 34px;
+	position: relative;
+	top: 0px;
+	left: -500px;
 }
 
 .log-in-btn {
@@ -16,11 +16,12 @@
 .site-navbar {
 	margin-bottom: 0px;
 	z-index: 1999;
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 150%;
+	width: 130%;
+	height: 85px;
 	// padding: 10px 30px!important;
 	border-radius: 4px;
 	
@@ -34,7 +35,7 @@
 		}
 		.site-menu {
 			
-			margin-bottom: 0;
+			margin-top: 5px;
 			.active {
 				> a {
 					color: $white;
