@@ -11,9 +11,14 @@
  * It is generally better to create a new file per style scope.
  *
  * 
- *= require font-awesome
+ *= require style
+ *= require_self
+ *= require_tree.
+ 
  */
 
 
 
+@import "bootstrap-sprockets";
 @import "bootstrap";
+
