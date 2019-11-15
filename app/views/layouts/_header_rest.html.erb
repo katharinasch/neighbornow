@@ -1,0 +1,45 @@
+<div class="site-wrap">
+  <div class="site-mobile-menu">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+</div>
+
+
+<header class="site-navbar container-fluid  py-0" role="banner" style="background-color: #547181;">
+  
+  <nav class="site-navigation position-relative text-right" role="navigation">
+   <div class="col-12 col-md-10 d-none d-xl-block">
+    <ul class="site-menu nav-fill w-100 mr-auto d-none d-lg-block">
+      <li>
+        <div class="logo">
+         <img src="<%= image_path('logo_transparent.png') %>" width="250" height="70" alt="">
+        </div>
+      </li>
+          
+      <li class="active"><a><%= link_to 'Home', root_path %></a></li>
+      <li class="active"><a>About</a></li>
+
+      <li><a>Search</a></li>
+      <li class="mr-5"><a>Contact</a>
+
+
+      <% if user_signed_in? %>
+
+          <% if current_user.profile == nil %>
+            <li><span class="bg-primary text-white rounded"><%= link_to 'Create profile', new_profile_path%></span></li>
+          <% else %>
+            <li><span class="bg-primary text-white rounded"><%= link_to 'My profile', current_user.profile%></span></li>
+          <% end %>
+
+        <li><span class="bg-primary text-white rounded"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></span></li>
+      <% end %>
+
+        </ul>
+      </nav>
+    
+  </div>
+</header>
