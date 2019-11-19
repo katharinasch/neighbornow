@@ -1,5 +1,16 @@
 <div class="container">
 
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -12,7 +23,7 @@
   <%= @profile.rating %>
 </p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<%= link_to 'Edit', edit_user_profile_path(current_user.id, current_user.profile.id) %> |
+<%= link_to 'Back', user_profiles_path %>
 
 <div class="container">

@@ -17,9 +17,9 @@
       <tr>
         <td><%= profile.about %></td>
         <td><%= profile.rating %></td>
-        <td><%= link_to 'Show', profile_path(profile) %></td>
-        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user_profile_path(current_user.id, current_user.profile.id) %></td>
+        <td><%= link_to 'Edit', edit_user_profile_path(current_user.id, current_user.profile.id) %></td>
+        <td><%= link_to 'Delete', user_profile_path(current_user.id, current_user.profile.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

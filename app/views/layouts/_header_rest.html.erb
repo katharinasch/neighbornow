@@ -30,9 +30,9 @@
       <% if user_signed_in? %>
 
           <% if current_user.profile == nil %>
-            <li><span class="bg-primary text-white rounded"><%= link_to 'Create profile', new_profile_path%></span></li>
+            <li><span class="bg-primary text-white rounded"><%= link_to 'Create profile', new_user_profile_path%></span></li>
           <% else %>
-            <li><span class="bg-primary text-white rounded"><%= link_to 'My profile', current_user.profile%></span></li>
+            <li><span class="bg-primary text-white rounded"><%= link_to 'My profile', user_profile_path(current_user.id, current_user.profile.id) %></span></li>
           <% end %>
 
         <li><span class="bg-primary text-white rounded"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></span></li>
