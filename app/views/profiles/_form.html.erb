@@ -11,6 +11,11 @@
     <%= form.number_field :rating %>
   </div>
 
+  <div class="field">
+    <%= form.file_field :avatar %>
+    <% form.label "Profile photo" %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

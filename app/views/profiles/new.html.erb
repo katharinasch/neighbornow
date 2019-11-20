@@ -10,22 +10,7 @@
 byebug
 
 <%= render 'form', profile: @profile %>
-	<%if @user && @user.image.present? %>
-	  	<img src="<%= @user.image %>" >
-	<% else %> 
-		<%= form_for(@profile, :url => user_profiles_path, :method => "post") do |f| %>
-		  <%= f.file_field :avatar %>
-		  <%# f.label "Profile photo" %>
-		 
-		  <%= f.submit 'Save Profile', class: "btn btn btn-primary" %>
-		<% end %>
-	<% end %>
-<br>
-
-
-
-
-<%= link_to 'Back', user_profiles_path %>
+	
 </div>
 
 <%# form_for [:user, @profile] @person do |f| %>

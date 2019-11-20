@@ -1,8 +1,28 @@
 <div class="container">
 <h1>Editing Profile</h1>
 
-<%= render 'form', profile: @profile %>
+<%= form_with(model: @profile, url: user_profile_path, method: :patch) do |form| %>
+ 
 
-<%= link_to 'Show',  user_profile_path %> |
-<%= link_to 'Back', user_profiles_path %>
+  <div class="field">
+    <%= form.label :about %>
+    <%= form.text_area :about %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rating %>
+    <%= form.number_field :rating %>
+  </div>
+
+  <div class="field">
+    <%= form.file_field :avatar %>
+    <% form.label "Profile photo" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
 </div>
