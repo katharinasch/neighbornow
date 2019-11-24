@@ -4,15 +4,19 @@ class ProfilesController < ApplicationController
 
   # GET /profiles
   # GET /profiles.json
-  #def index
-    #@profiles = Profile.all
+  def index
+    @profiles = Profile.all
+    @users = User.all
     #current_user.build_profile
-  #end
+  end
 
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    @user = User.find(params[:user_id])
     @profile = Profile.find(params[:id])
+    @review = Review.new
+    @reviews = Review.where("profile_id = ?", params[:id])
   end
 
   # GET /profiles/new
@@ -22,6 +26,7 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
+    @profile = Profile.find(params[:id])
   end
 
   # POST /profiles
@@ -72,6 +77,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.permit(:about, :rating, :avatar)
+      params.permit(:about, :avatar)
     end
 end

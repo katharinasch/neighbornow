@@ -13,21 +13,36 @@
 <br>
 <p id="notice"><%= notice %></p>
 
+<% if @profile == current_user.profile  %>
+	<strong> Welcome </strong><%= current_user.first_name  %>
+<% else  %>
+	<strong> This is a profile of </strong><%= @profile.user.first_name  %> <%= @profile.user.last_name  %>
+<% end  %>
+
+
 <p>
   <strong>About:</strong>
   <%= @profile.about %>
 </p>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @profile.rating %>
-</p>
 
-<p>
 	<strong>Profile image</strong>
 	<%= image_tag(url_for(@profile.avatar), style: 'width:50px; height:50px;') %>
 </p>
 
-<%= link_to 'Edit', edit_user_profile_path(current_user.id, current_user.profile.id) %> 
+<%= render 'reviews/form' %>
+
+<% @reviews.each do |review| %>
+	<%= review.user.first_name %> <%= review.user.last_name %> wrote <small> <%= time_ago_in_words(review.created_at) %> ago </small>
+	<p>
+		<%= review.content %>
+		<br>
+		<strong> Rating </strong><%= review.rating %>
+	</p>
+<% end %>
+
+<%= link_to 'Edit', edit_user_profile_path(current_user.id, current_user.profile.id) %>
+<%= link_to 'Show other profiles', user_profiles_path %>
+
 
 <div class="container">

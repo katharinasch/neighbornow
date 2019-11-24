@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
 	has_one :profile, dependent: :destroy
 	after_create :create_profile
+	has_many :reviews, dependent: :destroy
 	accepts_nested_attributes_for :profile
 	validates :first_name, presence: true
 	validates :last_name, presence: true
