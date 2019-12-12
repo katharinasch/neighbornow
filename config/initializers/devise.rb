@@ -3,14 +3,12 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
-  
-
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'f8ac75bafa97e7fc0209d7711cc66a6540112134b7653879922dab22522c500fe5ecd7962e9bc35b9aacc5f5b80d7452f67fac81d22c01fc073d229047e0c147'
+  # config.secret_key = '62816852397dd0e8f447fbef37260b5c67debe58e51049d0a35359505437419cbbd52bf8f8acbdd613951f4881252f218f37afd236fcfff9d78de1846d446285'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -116,7 +114,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = 'e6f75191bcd37333d88da6ff44cca1b3d92ea233e2914be060cd8049bea5a016707acf3ca805f81352184af37282650627c846ba6e38d7622d17a24fb985f22f'
+  # config.pepper = 'ebb38342f1daf57328227e3b69c6cd3788f321d79f690f83e8e218d5c7c691de633c52d74b25fe782c5c11fcab47c7f47f9621ba7d9f6c91a5373107b755f5b9'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -259,12 +257,13 @@ Devise.setup do |config|
   config.sign_out_via = [:delete, :get]
 
   # ==> OmniAuth
-  config.omniauth :facebook, "2371765459612975", "fa511b59a4e7faf029c02c7dba9456fe"
-  # scope: 'email', info_fields: 'email, first_name, last_name'
-
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  config.omniauth :facebook, "2371765459612975", "fa511b59a4e7faf029c02c7dba9456fe"
+
+
+
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

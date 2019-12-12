@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_24_003041) do
+ActiveRecord::Schema.define(version: 2019_11_27_024958) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -34,21 +34,10 @@ ActiveRecord::Schema.define(version: 2019_11_24_003041) do
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.text "about"
+    t.string "about"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
-  end
-
-  create_table "reviews", force: :cascade do |t|
-    t.integer "rating"
-    t.text "content"
-    t.integer "user_id"
-    t.integer "profile_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["profile_id"], name: "index_reviews_on_profile_id"
-    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -59,15 +48,14 @@ ActiveRecord::Schema.define(version: 2019_11_24_003041) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "provider"
-    t.string "uid"
     t.string "first_name"
     t.string "last_name"
     t.string "street"
     t.integer "house_number"
     t.string "city"
     t.integer "zip_code"
-    t.string "image"
+    t.string "provider"
+    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

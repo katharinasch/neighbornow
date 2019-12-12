@@ -1,0 +1,12 @@
+    <%= form_for @user, url: wizard_path do |f| %>
+    <div class="field">
+        <%= f.label :street %>
+        <%= f.text_area :street %>
+    </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+  <% end %>

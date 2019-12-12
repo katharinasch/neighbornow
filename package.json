@@ -1,9 +1,5 @@
 {
-  "name": "neigbornow",
+  "name": "neighbornow_new",
   "private": true,
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^1.9.1",
-    "popper.js": "^1.16.0"
-  }
+  "dependencies": {}
 }

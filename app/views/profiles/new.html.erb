@@ -10,7 +10,23 @@
 
 
 
-<%= render 'form', profile: @profile %>
+<%= form_for(@profile, url: user_profile_path(current_user), method: :post) do |f| %>
+  
+    <div class="field">
+      <%= f.label :about %>
+      <%= f.text_area :about %>
+    </div>
+
+    <div class="field">
+      <%= f.file_field :avatar %>
+      <% f.label "Profile photo" %>
+    </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>®
 	
 </div>
 

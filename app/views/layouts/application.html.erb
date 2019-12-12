@@ -4,6 +4,11 @@
     <title>Neigbornow</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta>
+      <%= javascript_include_tag 'application' %>
+      <%= yield :js %>
+    <meta>
+
 
 
 

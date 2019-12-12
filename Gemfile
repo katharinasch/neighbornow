@@ -10,7 +10,6 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
-
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -56,7 +55,7 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  # gem 'chromedriver-helper'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -64,21 +63,22 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Device Gem for user authentication and other useful gems connected to instalation of device
 gem 'devise'
-gem 'twitter-bootstrap-rails'
+# gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
 gem 'devise-bootstrap-views'
 
-
-# 13.11.2019
-gem 'faker'
+#Frontend
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 
-# 14.11.2019
+#Authentification
 gem 'omniauth-facebook'
-gem 'bootstrap', '~> 4.3.1'
-gem 'breakpoint'
 
-# 15.11.2019
+#Multistep-form
 
-gem "bootstrap_form", "~> 4.0"
+gem 'wicked'
+
+
+
+
+

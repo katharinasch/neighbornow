@@ -5,29 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-<<<<<<< HEAD
-10.times do |n|
-	email = Faker::Internet.email
-	password = "password"
-	User.create!(
-		email: email,
-		password: password,
-		password_confirmation: password)
-	p "Created user #{n+1}"
-end
-
-users = User.all
-
-i = 0
-users.each do |user|
-	i += 1
-	about = Faker::Lorem.paragraph
-	user.build_profile(
-		about: about,
-		rating: rand(1..5))
-	user.save!
-	puts "Created profile #{i}"
-end
-
-=======
->>>>>>> 5f088c271d1ca1e33aa9e9fbb71ff871cddc97f9

@@ -1,0 +1,18 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1> here are all users</h1>
+
+<% @users.each do |user| %>
+<table style="width:50%">
+<tr>
+	<th><%= link_to 'Show user profile', user_profile_path(user, @profile) %> <%= user.first_name%>   <%= user.last_name%></th>
+ 
+</tr>
+</table>
+        
+<% end %>
