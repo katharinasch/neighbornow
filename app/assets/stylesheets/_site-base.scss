@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap');
+
+
+
 body {
   line-height: 1.7;
   color: #4d4d4d;
   font-size: 1rem; 
   font-family: "Roboto", sans-serif;
+  
 
 }
+
+
 
 /* HEADER WITH TEXT */
 
@@ -16,6 +23,16 @@ body {
 h1 {
   font-weight: bold !important;
   font-size: 65px !important;
+}
+
+.notification {
+  margin-top: 100px;
+  font-size: 20px !important;
+  font-weight: bold !important;
+  text-align: center;
+  color: #547181;
+
+  
 }
 
 p {
@@ -37,24 +54,134 @@ p {
     float: none;
 }
 
+
+.red {
+  color: #ff0000;
+  font-weight: bold !important;
+}
+
+p.red {
+  color: #ff0000;
+  font-weight: bold !important;
+  font-size: 12px !important;
+  margin-top: 5px;
+}
+
+label.required:after {
+    content: " *";
+    color: #ff0000;
+}
+
+.field_with_errors {
+  margin: 0px;
+}
+
+
 /* REGISTER PAGE */
 
 .center-items-register {
-  	width: 70%;
-  	height: 700px !important;
-  	background-color: rgba(220,226,229,0.3);
-  	font-weight: lighter! important;
-  	color: #547181;
-  	border-radius: 25px;
-    margin: 130px auto;
-    align-items: center;
-    justify-content: space-around;
-    display: flex;
-    float: none;
+  width: 60%;
+	height: 500px !important;
+	background-color: rgba(220,226,229,0.3);
+	font-weight: lighter! important;
+	color: #547181;
+	border-radius: 25px;
+  margin: 130px auto;
+  display: flex;
+  align-items: top; 
+  justify-content: center;
+  padding: 40px 20px;
 }
 
-th {
-	padding: 20px !important;
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction:column;
+  flex-basis: 100%;
+  flex: 1;
+  width: 300px;
+  padding: 20px !important;
+  margin: 0 auto !important;
+  
+}
+
+.field.email {
+  width: 60% !important;
+}
+
+
+/* REGISTER PAGE - MIDDLE SIZE */
+
+@media (max-width: 990px) {
+  .column.buttons {
+    padding-left: 103px !important;
+    margin-left: 0px !important;
+  }
+
+  div.row.buttons  {
+    display: block;
+    float:left; 
+    clear:left;
+    padding-left: 0px !important;
+    margin-left: -100px !important;
+    
+  }
+  .btn-social {
+    margin-left: 0px !important;
+    width: 220px !important;
+  }
+  .center-items-register {
+    width: 90%;
+    height: 550px !important;
+  }
+
+
+}
+
+
+/* REGISTER PAGE - SMALL SIZE */
+
+@media (max-width: 610px) {
+  .center-items-register {
+    height: 750px !important;
+    margin-left: 10px !important;
+  }
+
+  .row {
+    display: block !important;
+  }
+
+}
+
+
+/* REGISTER PAGE - MINI SIZE */
+
+@media (max-width: 379px) {
+  .center-items-register {
+    width: 100%;
+    height: 750px !important;
+    margin-left: 0px !important;
+  }
+
+  .row {
+    display: block !important;
+  }
+
+  .field {
+    width: 60% !important;
+  }
+
+  .column.buttons {
+    font-size: 10px;
+  }
+
 }
 
 
@@ -67,6 +194,7 @@ th {
 	> a {text-decoration: none!important;}
 }
 
+
 .btn.form {
 	background-color: rgb(145, 167, 179);
 	padding: 10px 20px !important;
@@ -78,7 +206,7 @@ th {
 }
 
 .btn.form.margin {
-	margin-left: 20px !important;
+	
 	background-color: rgb(145, 167, 179);
 	padding: 10px 20px !important;
 	border-radius: 10px !important; 
@@ -87,4 +215,32 @@ th {
 	font-weight: 300 !important;
 	> a {text-decoration: none!important;}
 }
+
+.btn.form.margin.button-allign {
+  margin-left: 20px !important;
+  margin-top: 30px !important;
+  
+}
+
+.btn-social {
+    color: #fff;
+    background-color: #3b5998;
+    border-color: rgba(0,0,0,0.2);
+    font-size: 16px !important;
+    font-weight: 300 !important;
+    border-radius: 10px !important; 
+    margin-right: 100px;
+    margin-left: -100px;
+}
+
+.btn-social:hover {
+    color: #fff !important;
+    padding-top: 10px !important;
+}
+
+.fa-facebook {
+  padding-right: 5px !important;
+}
+
+
 

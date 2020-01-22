@@ -1,0 +1,49 @@
+
+/* THE MODAL (BACKGROUND) */
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  margin: 150px auto !important; 
+  width: 50%; 
+  height: 50%; 
+  overflow: auto; 
+
+}
+
+.alert.alert-danger {
+  background-color: white !important;
+  border: none !important;
+  color: #547181;
+  font-size: 14px; 
+  font-family: "Roboto", sans-serif !important;
+}
+
+/* MODAL CONTENT */
+
+.modal-content {
+  display: block;
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border: 0.3px solid #888;
+  width: 80%;
+}
+
+ul {
+  display: block !important;
+}
+
+/* THE CLOSE BUTTON */
+
+.dismiss-close {
+  position: absolute;
+  bottom: 15px;
+  right:25%;
+  left:50%;
+  background-color: rgb(145, 167, 179);
+  color: rgb(237, 237, 237);
+  font-weight: 300 !important;
+}

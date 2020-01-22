@@ -1,12 +1,64 @@
-    <%= form_for @user, url: wizard_path do |f| %>
-    <div class="field">
-        <%= f.label :street %>
-        <%= f.text_area :street %>
+<%= stylesheet_link_tag 'address_step' %>
+<%= stylesheet_link_tag 'modal_errors' %>
+
+
+<div class="container">
+    <p class="notification">Please finalise your personal information.</p>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-body">                 
+                </div>
+                <button type="button" class="btn btn-secondary dismiss-close" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    <div class="center-items-register-second">
+
+    <%= form_for(@user, url: wizard_path, remote: true) do |f| %>
+    <%= render "devise/shared/error_messages" %>
+   
+
+        <div class="row second 1">
+            <div class="column">
+              <div class="field wizard">
+                <%= f.label :street %><br />
+                <%= f.text_field :street, class: 'form-control' %>
+              </div>
+            </div>
+
+            <div class="column">
+                <div class="field housenumber">
+                    <%= f.label :house_number %><br />
+                    <%= f.text_field :house_number, class: 'form-control' %>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row second 2">
+            <div class="column">
+                <div class="field wizard">
+                    <%= f.label :city %><br />
+                    <%= f.text_field :city, class: 'form-control' %>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="field wizard zipcode">
+                    <%= f.label :zip_code %><br />
+                    <%= f.text_field :zip_code, class: 'form-control' %>
+                </div>
+            </div>
+
+        </div>
+            
+
+        <div class="row second 3">
+              <div class="actions">
+                <%= f.submit "Register", class: 'btn form margin button-allign'%>
+              </div>
+            <% end %>
+        </div>
+
     </div>
+</div>
 
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-
-  <% end %>

@@ -77,7 +77,7 @@ gem 'omniauth-facebook'
 #Multistep-form
 
 gem 'wicked'
-
+gem "font-awesome-rails"
 
 
 

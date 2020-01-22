@@ -1,18 +1,29 @@
 class UserStepsController < ApplicationController
+	respond_to :html, :js
 	include Wicked::Wizard
 	steps :address
 
 
+
 	def show
-	  @user = current_user
+	  @user = current_user || User.from_omniauth(request.env["omniauth.auth"])
 	  render_wizard
 	end
 
 
 	def update
-	  @user = current_user
-	  @user.update!(user_params)
-	  render_wizard @user
+	  @user = current_user || User.from_omniauth(request.env["omniauth.auth"])
+		if @user.update_attributes(user_params)
+		  	render_wizard @user
+		else
+	        respond_to do |format|
+	          format.js do
+	            render template: 'devise/registrations/failed_modal.js.erb',
+	            layout: false,
+	            locals: { error_messages: @user.errors.full_messages }
+	          end
+	        end
+	    end
 	end
 
 	private

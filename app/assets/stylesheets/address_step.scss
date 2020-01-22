@@ -1,0 +1,131 @@
+
+
+/* REGISTER PAGE #2 */
+
+.center-items-register-second {
+  width: 45%;
+  height: 350px !important;
+  background-color: rgba(220,226,229,0.3);
+  font-weight: lighter! important;
+  color: #547181;
+  border-radius: 25px;
+  margin: 50px auto;
+  display: flex;
+  align-items: top; 
+  justify-content: flex-start !important;
+  padding: 40px 70px;
+}
+
+.field.housenumber {
+  width: 80% !important;
+}
+
+.field.zipcode {
+  width: 50% !important;
+}
+
+
+
+/* REGISTER PAGE #2 - MIDDLE SIZE */
+
+@media (max-width: 1200px) {
+ .center-items-register-second {
+    width: 40%;
+    height: 550px !important;
+  }
+
+  .row.second {
+    display: block !important;
+  }
+
+
+.field.housenumber {
+  width: 50% !important;
+}
+ 
+
+}
+
+/* REGISTER PAGE #2 - MIDDLE SIZE */
+
+
+@media (max-width: 992px) {
+ .center-items-register-second {
+    width: 60%;
+    height: 550px !important;
+  }
+
+  .row.second {
+    display: block !important;
+  }
+
+  .field.housenumber {
+  width: 50% !important;
+}
+ 
+
+}
+
+
+/* REGISTER PAGE #2 - SMALL SIZE */
+
+@media (max-width: 767px) {
+ .center-items-register-second {
+    width: 60%;
+    height: 550px !important;
+   
+  }
+
+  .row.second {
+    display: block !important;
+  }
+
+  .field.housenumber {
+  width: 50% !important;
+}
+ 
+
+}
+
+
+/* REGISTER PAGE #2 - MINI SIZE */
+
+@media (max-width: 660px) {
+ .center-items-register-second {
+    width: 80%;
+    height: 550px !important;
+   
+  }
+
+  .row.second {
+    display: block !important;
+  }
+
+  .field.housenumber {
+  width: 50% !important;
+}
+ 
+
+}
+
+/* REGISTER PAGE #2 - MINI SIZE */
+
+@media (max-width: 510px) {
+ .center-items-register-second {
+    width: 97%;
+    height: 550px !important;
+    margin-left: 0px !important;
+   
+  }
+
+  .row.second {
+    display: block !important;
+  }
+
+
+  .field.housenumber {
+  width: 50% !important;
+}
+ 
+
+}

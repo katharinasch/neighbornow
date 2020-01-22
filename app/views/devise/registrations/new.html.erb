@@ -1,92 +1,82 @@
-<div class="container ">
+<%= stylesheet_link_tag 'modal_errors' %>
+
+<div class="container">
+
+  <div id="myModal" class="modal">
+        <div class="modal-content">
+                <div class="modal-body">
+                </div>
+                <button type="button" class="btn btn-secondary dismiss-close" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
   <div class="center-items-register">
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
-        <table >
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), remote: true) do |f| %>
+    <%= render "devise/shared/error_messages" %>
 
-          <!--Name-->
-          <tr>
-            <th>
-
-              <div class="field">
-                <%= f.label :first_name %><br />
-                <%= f.text_field :first_name, class: 'form-control' %>
-              </div>
-
-            </th>
-          
-            <th>
-
-              <div class="field">
-                <%= f.label :last_name %><br />
-                <%= f.text_field :last_name, class: 'form-control' %>
-              </div>
-
-            </th>
-          </tr>
-
-        <!--Name-->
-
-        <!--Email -->
-
-          <tr>
-
-            <th>
-
-              <div class="field">
-                <%= f.label :email %><br />
-                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
-              </div>
-
-            </th>
-            <th>
-              <p></p>
-            </th>
-
-          </tr>
-
-        <!--Email -->
-
-
-    <!--PW -->
-
-    
-      <tr>
-        <th>
-
+      <div class="row 1">
+        <div class="column">
           <div class="field">
-            <%= f.label :password %>
+            <%= f.label :first_name, class: 'required' %><br />
+            <%= f.text_field :first_name, class: 'form-control' %>
+          </div>
+        </div>
+
+
+        <div class="column">
+          <div class="field">
+            <%= f.label :last_name, class: 'required' %><br />
+            <%= f.text_field :last_name, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row 2">
+        <div class="column">
+          <div class="field email">
+            <%= f.label :email, class: 'required' %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row 3">
+        <div class="column">
+          <div class="field">
+            <%= f.label :password, class: 'required' %>
             <% if @minimum_password_length %>
             <em>(<%= @minimum_password_length %> characters minimum)</em>
-            <% end %><br />
-            <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
+            <% end %>
+            <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %><br />
           </div>
+        </div>
 
-        </th>
-
-        <th>
-
-          <div class="field">
-            <%= f.label :password_confirmation %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+          <div class="column">
+            <div class="field">
+              <%= f.label :password_confirmation, class: 'required' %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+            </div>
           </div>
+        </div>
 
-         </th>
-      <tr>
-    </table>
-
-    <!--PW -->
-
-
-      <div class="actions">
-        <%= f.submit "Sign up", class: 'btn form margin' %>
-      </div>
+      <div class="row buttons">
+        <div class="column buttons">
+          <div class="actions">
+            <%= f.submit "Sign up", class: 'btn form margin' %>
+          </div>
+        </div>
     <% end %>
 
-      <% if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-        <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
-      <% end %>
-      <%= link_to "Sign up with facebook", user_facebook_omniauth_authorize_path %>
-  </div>
+        <div class="column buttons">
+
+          <% if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+            <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+          <% end %>
+          <%= link_to fa_icon("facebook", text: "Sign up with facebook"), user_facebook_omniauth_authorize_path, class: "btn btn-lg btn-social btn-facebook" %>
+        </div>
+      </div>
+    </div>
 </div>
+
 

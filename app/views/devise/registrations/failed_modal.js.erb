@@ -1,0 +1,18 @@
+var errors = <%= error_messages.to_json.html_safe %>;
+
+var errorForm = document.querySelector('#myModal');
+var modalBody = errorForm.querySelector('.modal-body');
+var alertElement = document.createElement('div')
+alertElement.classList.add('alert');
+alertElement.classList.add('alert-danger');
+modalBody.appendChild(alertElement);
+var errList = document.createElement('ul');
+alertElement.appendChild(errList)
+
+errors.forEach(function(error) {
+var errElement = document.createElement('li');
+errElement.innerText = error;
+errList.appendChild(errElement)
+})
+
+errorForm.style.display = "block"; 
