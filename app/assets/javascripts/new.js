@@ -7,9 +7,17 @@ var modalBody = modal.querySelector(".modal-body");
 var modalContent = modal.querySelector(".modal-content");
 
 
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    modalBody.removeChild(modalBody.querySelector('#alertElement'))
+  }
+}
+
 function closeModal() {
 modal.style.display = "none";
-modalBody.innerHTML = "";
+modalBody.removeChild(modalBody.querySelector('#alertElement'));
 
 }
 
@@ -19,4 +27,5 @@ event.stopPropagation();
 
 close.addEventListener("click", closeModal);
 modal.addEventListener("click", closeModal);
+
 }); 

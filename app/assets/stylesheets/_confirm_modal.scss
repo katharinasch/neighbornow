@@ -1,0 +1,69 @@
+
+.custom-modal {	
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1050;
+	display: none;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	outline: 0;
+
+	.modal-header {
+		border-bottom-style: none !important;
+	}
+
+	.modal-body {
+		
+  		font-family: "Roboto", sans-serif !important;
+  		text-align: center !important;
+  		color: #506B83 !important;
+	}
+
+
+	.modal-footer {
+		display: flex !important;
+  		justify-content: center !important;
+  		padding: 5px !important;
+  		border-top-style: none !important;
+	}
+
+	.btn {
+		padding: 10px 20px !important;
+		border-radius: 10px !important; 
+		margin: 10px !important;
+
+	}
+
+
+	.btn-default {
+		color: #fff !important;
+		background-color: #d9534f !important;
+		border-color: #d43f3a !important;
+		
+	}
+
+
+	.btn-danger {
+		color: #506B83 !important;
+		background-color: white !important;
+		border-color: #506B83 !important;
+		
+	}
+}
+
+
+
+/* CONFIRM MODAL - MINI SIZE */
+
+
+@media (max-width: 510px) {
+
+	.custom-modal {
+
+
+		font-size: 7px !important;	
+	}
+}

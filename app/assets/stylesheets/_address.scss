@@ -2,6 +2,10 @@
 
 /* REGISTER PAGE #2 */
 
+body {
+  overflow-y: scroll;
+}
+
 .center-items-register-second {
   width: 45%;
   height: 350px !important;
@@ -31,7 +35,7 @@
 @media (max-width: 1200px) {
  .center-items-register-second {
     width: 40%;
-    height: 550px !important;
+    height: 650px !important;
   }
 
   .row.second {
@@ -39,10 +43,17 @@
   }
 
 
-.field.housenumber {
-  width: 50% !important;
-}
- 
+  .field.housenumber {
+    width: 50% !important;
+  }
+
+  div.row.btns {
+      display: block;
+  }
+
+  btn.form.margin {
+    padding: 0px !important;
+  }
 
 }
 
@@ -52,7 +63,7 @@
 @media (max-width: 992px) {
  .center-items-register-second {
     width: 60%;
-    height: 550px !important;
+    height: 650px !important;
   }
 
   .row.second {
@@ -72,7 +83,7 @@
 @media (max-width: 767px) {
  .center-items-register-second {
     width: 60%;
-    height: 550px !important;
+    height: 650px !important;
    
   }
 
@@ -93,7 +104,7 @@
 @media (max-width: 660px) {
  .center-items-register-second {
     width: 80%;
-    height: 550px !important;
+    height: 650px !important;
    
   }
 
@@ -113,7 +124,7 @@
 @media (max-width: 510px) {
  .center-items-register-second {
     width: 97%;
-    height: 550px !important;
+    height: 650px !important;
     margin-left: 0px !important;
    
   }
@@ -127,5 +138,8 @@
   width: 50% !important;
 }
  
+ .btn.form.margin.second {
+    width: 50% !important;
+ }
 
 }

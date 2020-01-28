@@ -26,6 +26,7 @@ class UserStepsController < ApplicationController
 	    end
 	end
 
+
 	private
 
 	def user_params

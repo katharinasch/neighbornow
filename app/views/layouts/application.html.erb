@@ -17,15 +17,19 @@
     <%# stylesheet_link_tag 'owl.carousel.min', media: "all", "data-turbolinks-track" => true %>
     <%# stylesheet_link_tag 'jquery-ui', media: "all", "data-turbolinks-track" => true %>
     <%# javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
+
   <body>
-    <% if current_page?(root_path) %>
+    <% if @user.nil? %>
       <%= render 'layouts/header' %>
+    <% elsif user_signed_in? && current_page?(user_step_path)%>
+      <%= render partial: "layouts/header_address" %>
     <% else %>
       <%= render 'layouts/header_rest' %>
     <% end %>
-    <%= render 'layouts/flash' %>
+      <%= render 'layouts/flash' %>
     <%= yield %>
   </body>
 </html>

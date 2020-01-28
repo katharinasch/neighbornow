@@ -6,7 +6,7 @@ ruby '2.6.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -69,7 +69,6 @@ gem 'devise-bootstrap-views'
 
 #Frontend
 gem 'bootstrap-sass'
-gem 'font-awesome-rails'
 
 #Authentification
 gem 'omniauth-facebook'
@@ -78,6 +77,24 @@ gem 'omniauth-facebook'
 
 gem 'wicked'
 gem "font-awesome-rails"
+
+#Modal
+
+gem 'data-confirm-modal'
+
+#GoogleMaps
+
+gem 'geocoder'
+# gem 'figaro'
+
+#AgoliaSearch
+
+gem "algoliasearch-rails"
+gem 'algolia-places-rails', '~> 1.16', '>= 1.16.4'
+
+#Security
+
+gem 'dotenv'
 
 
 

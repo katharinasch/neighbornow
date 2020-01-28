@@ -1,5 +1,7 @@
 {
   "name": "neighbornow_new",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "algoliasearch": "^3.35.1"
+  }
 }
