@@ -91,6 +91,8 @@ gem 'geocoder'
 
 gem "algoliasearch-rails"
 gem 'algolia-places-rails', '~> 1.16', '>= 1.16.4'
+gem 'webpacker'
+gem 'simple_form'
 
 #Security
 

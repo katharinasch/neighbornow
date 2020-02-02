@@ -7,8 +7,8 @@
                     <div class="modal-body">     
                         <button type="button" class="btn btn-secondary dismiss-close" data-dismiss="modal">Close</button>
                     </div>
-                </div>    
-           
+                 
+           </div>
         </div>
     <div class="center-items-register-second">
 
@@ -20,7 +20,7 @@
             <div class="column">
               <div class="field wizard">
                 <%= f.label :street, class: 'required'%><br />
-                <%= f.text_field :street, id: :autocomplete_address, class: 'form-control' %>
+                <%= f.text_field :street, class: 'form-control' %>
               </div>
             </div>
 
@@ -54,12 +54,12 @@
             <div class="row btns second 3">
                 <div class="column btns">
                 
-                     <%= f.submit "Register", class: 'btn form margin second'%>
+                     <%= f.submit "Register", class: 'btn form margin second register', data: { toggle: "modal", target: "#myModal" } %>
                 
                 </div>
                 <% end %>
                 <div class="column btns">
-                    <%= link_to "Quit", @user, method: :delete, data: { confirm: "Your data won't be saved! Are you sure you want to quit registration process?", title: " " },  class: 'btn form margin second' %>
+                    <%= link_to "Quit", @user, method: :delete, data: { confirm: "Your data won't be saved! Are you sure you want to quit registration process?", title: " " },  class: 'btn form margin second quit' %>
                 </div>
                 
             </div>

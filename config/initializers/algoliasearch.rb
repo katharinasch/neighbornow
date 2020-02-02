@@ -1,1 +1,1 @@
-AlgoliaSearch.configuration = { application_id: ENV[APP_ID_PLACES], api_key: ENV[API_KEY_PLACES] }
+AlgoliaSearch.configuration = { application_id: 'plOCOP4PJHNI', api_key: 'a6a85766d676ea202808d19704efcd19' }

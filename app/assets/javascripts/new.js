@@ -10,14 +10,20 @@ var modalContent = modal.querySelector(".modal-content");
 
 window.onclick = function(event) {
   if (event.target == modal) {
-    modal.style.display = "none";
-    modalBody.removeChild(modalBody.querySelector('#alertElement'))
+    $('#myModal').modal('hide');
+    $('body').removeClass('modal-open');
+    $('.modal-backdrop').remove();
+    modalBody.removeChild(modalBody.querySelector('#alertElement'));
+    
   }
 }
 
 function closeModal() {
-modal.style.display = "none";
-modalBody.removeChild(modalBody.querySelector('#alertElement'));
+	$('#myModal').modal('hide');
+  $('body').removeClass('modal-open');
+  $('.modal-backdrop').remove();
+	modalBody.removeChild(modalBody.querySelector('#alertElement'));
+
 
 }
 

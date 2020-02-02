@@ -8,13 +8,12 @@
   padding-top: 100px; 
   margin: 150px auto !important; 
   width: 50%; 
-  height: 50%; 
-  overflow: hidden; 
+  height: 70%; 
+  overflow: hidden !important; 
   outline: 0;
   transition: opacity .15s linear !important;
 
 }
-
 
 
 .alert.alert-danger {
@@ -115,12 +114,8 @@ ul {
 
 @media (max-width: 650px) {
 
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
-  margin: 150px auto !important; 
+.modal { 
+
   width: 70%; 
   height: 50%; 
 }
@@ -148,11 +143,7 @@ ul {
 @media (max-width: 515px) {
 
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
-  margin: 150px auto !important; 
+
   width: 90%; 
   height: 50%; 
 }
@@ -180,11 +171,8 @@ ul {
 @media (max-width: 388px) {
 
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
-  margin: 150px auto !important; 
+  
+
   width: 98%; 
   height: 50%; 
 }

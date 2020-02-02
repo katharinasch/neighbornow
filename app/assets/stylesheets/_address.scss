@@ -7,7 +7,7 @@ body {
 }
 
 .center-items-register-second {
-  width: 45%;
+  width: 60%;
   height: 350px !important;
   background-color: rgba(220,226,229,0.3);
   font-weight: lighter! important;
@@ -21,14 +21,22 @@ body {
 }
 
 .field.housenumber {
-  width: 80% !important;
-}
-
-.field.zipcode {
   width: 50% !important;
 }
 
+.field.zipcode {
+  width: 40% !important;
+}
 
+.btn.form.margin.second.quit {
+  
+  width: 60% !important;
+}
+
+.btn.form.margin.second.register {
+  
+  width: 80% !important;
+}
 
 /* REGISTER PAGE #2 - MIDDLE SIZE */
 

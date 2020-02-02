@@ -1,12 +1,12 @@
 <div class="container">
 
-  <div id="myModal" class="modal" role="dialog">
+  <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-content">
-                <div class="modal-body">
-                  <button type="button" class="btn btn-secondary dismiss-close" data-dismiss="modal">Close</button>
-                </div>          
-            </div>
+          <div class="modal-body">
+            <button type="button" class="btn btn-secondary dismiss-close" data-dismiss="modal">Close</button>
+          </div>          
         </div>
+  </div>
 
   <div class="center-items-register">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), remote: true) do |f| %>
@@ -61,7 +61,7 @@
       <div class="row buttons">
         <div class="column buttons">
           <div class="actions">
-            <%= f.submit "Sign up", class: 'btn form margin' %>
+            <%= f.submit "Sign up", class: 'btn form margin', data: { toggle: "modal", target: "#myModal" } %>
           </div>
         </div>
     <% end %>

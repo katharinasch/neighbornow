@@ -13,10 +13,10 @@
 
 //= require jquery
 //= require jquery_ujs
+
 //= require bootstrap-sprockets
 //= require activestorage
 //= require turbolinks
 //= require data-confirm-modal
 //= require confirm-modal
-//= require algolia-places-rails/places.min
 //= require_tree .
